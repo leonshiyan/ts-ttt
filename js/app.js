@@ -11,3 +11,16 @@ const squareEles = document.querySelectorAll('.sqr');
 const messageEl = document.getElementById('message');
 const boardEl = document.querySelector('.board');
 const resetBtnEl = document.querySelector('.reset-button');
+/*----------------------------- Event Listeners -----------------------------*/
+// boardEl.addEventListener('click',handleClick)
+// resetBtnEl.addEventListener('click',init)
+// boardEl.addEventListener('animationend', handleAnimationEnd, {once: false});
+/*-------------------------------- Functions --------------------------------*/
+function init() {
+    board.fill(0);
+    turn = -1;
+    winner = false;
+    tie = false;
+    messageEl.classList.remove('animate__animated', 'animate__flip');
+    //render()
+}

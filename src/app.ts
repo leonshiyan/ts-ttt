@@ -28,3 +28,24 @@ function init(): void{
   messageEl.classList.remove('animate__animated','animate__flip')
   //render()
 }
+function updateBoard() : void{
+  for (let i = 0; i < board.length; i++) {
+    if (board[i] === 1) {
+      squareEles[i].textContent = 'X';
+    } else if (board[i] === -1) {
+      squareEles[i].textContent = 'O';
+    } else {
+      squareEles[i].textContent = '';
+    }
+  }
+}
+
+
+
+
+// function render(){
+//   updateBoard()
+//   updateMessage()
+// }
+/*-------------------------------- Game init --------------------------------*/
+init()

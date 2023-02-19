@@ -7,3 +7,10 @@ let winner : boolean
 let tie : boolean
 let board : number [] = new Array(9)
 
+/*------------------------ Cached Element References ------------------------*/
+
+const squareEles: NodeListOf<Element> = document.querySelectorAll('.sqr')
+const messageEl : HTMLElement = document.getElementById('message')!
+const boardEl:Element = document.querySelector('.board')!
+const resetBtnEl:Element = document.querySelector('.reset-button')!
+

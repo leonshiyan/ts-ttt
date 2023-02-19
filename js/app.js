@@ -6,3 +6,8 @@ let turn;
 let winner;
 let tie;
 let board = new Array(9);
+/*------------------------ Cached Element References ------------------------*/
+const squareEles = document.querySelectorAll('.sqr');
+const messageEl = document.getElementById('message');
+const boardEl = document.querySelector('.board');
+const resetBtnEl = document.querySelector('.reset-button');

@@ -12,8 +12,8 @@ const messageEl = document.getElementById('message');
 const boardEl = document.querySelector('.board');
 const resetBtnEl = document.querySelector('.reset-button');
 /*----------------------------- Event Listeners -----------------------------*/
-boardEl.addEventListener('click', handleClick, true);
-resetBtnEl.addEventListener('click', init, true);
+boardEl.addEventListener('click', handleClick);
+resetBtnEl.addEventListener('click', init);
 boardEl.addEventListener('animationend', handleAnimationEnd, { once: false });
 /*-------------------------------- Functions --------------------------------*/
 function init() {
@@ -64,9 +64,11 @@ function handleClick(event) {
     sqIdx = parseInt(sqId.slice(2));
     if (board[sqIdx] || winner)
         return;
+    boardEl.removeEventListener('click', handleClick);
     playerMove(sqIdx);
+    computerMove();
     setTimeout(() => {
-        computerMove();
+        boardEl.addEventListener('click', handleClick);
     }, 300);
 }
 function playerMove(sqIdx) {
